@@ -8,6 +8,9 @@ from sklearn.metrics import confusion_matrix, f1_score
 from typing import Text, Dict
 import yaml
 
+import sys
+import os
+sys.path.append(os.getcwd())
 from src.report.visualize import plot_confusion_matrix
 from src.utils.logs import get_logger
 
