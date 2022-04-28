@@ -1,9 +1,8 @@
-
 base:
   random_state: 42
   log_level: INFO
 
-
+ 
 data_load:
   dataset_csv: 'data/raw/iris.csv'
 
