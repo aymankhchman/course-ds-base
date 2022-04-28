@@ -7,9 +7,14 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import confusion_matrix, f1_score
 from typing import Text, Dict
 import yaml
+<<<<<<< HEAD
 
 import sys
 import os
+=======
+import os
+import sys
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
 sys.path.append(os.getcwd())
 from src.report.visualize import plot_confusion_matrix
 from src.utils.logs import get_logger

@@ -4,7 +4,11 @@ stages:
     cmd: python src/stages/data_load.py --config=params.yaml
     deps:
     - path: src/stages/data_load.py
+<<<<<<< HEAD
       md5: b75e2a7909281fec2aa60cef802390c7
+=======
+      md5: cd4f686ac7d6814d1699cffa0f855e88
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
       size: 1007
     params:
       params.yaml:
@@ -24,8 +28,13 @@ stages:
       md5: 4224576f0267bf88902f87f0f6200967
       size: 2757
     - path: src/stages/featurize.py
+<<<<<<< HEAD
       md5: 5efb4d679a0ffed117157a41bd1832dc
       size: 1342
+=======
+      md5: 0e62e23a026eae95ca782e74493c6662
+      size: 1341
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
     params:
       params.yaml:
         base:
@@ -47,7 +56,11 @@ stages:
       md5: 5d03a1564b3038fc35a842f8e4bde491
       size: 7260
     - path: src/stages/data_split.py
+<<<<<<< HEAD
       md5: d4261a48cf4e09d091c1b0b37ad118e3
+=======
+      md5: dae80bbc224777fa0a406071e074f0b9
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
       size: 1348
     params:
       params.yaml:
@@ -75,8 +88,13 @@ stages:
       md5: ed8a7e5ba0a211251bdee6c498fe3eb4
       size: 5724
     - path: src/stages/train.py
+<<<<<<< HEAD
       md5: 4dd0e7566c0ddc79ae32f0400f5722ba
       size: 1421
+=======
+      md5: ceae0bf7a36c585237ba6d38316ffd5c
+      size: 1420
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
     params:
       params.yaml:
         base:
@@ -114,7 +132,11 @@ stages:
           model_path: models/model.joblib
     outs:
     - path: models/model.joblib
+<<<<<<< HEAD
       md5: 8161527ce289d431a2ede0caa61a8006
+=======
+      md5: b0e218495699731af38e18a49a9b89cd
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
       size: 2669
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
@@ -123,11 +145,19 @@ stages:
       md5: b5e45593a772fc66629488e1806505c4
       size: 1492
     - path: models/model.joblib
+<<<<<<< HEAD
       md5: 8161527ce289d431a2ede0caa61a8006
       size: 2669
     - path: src/stages/evaluate.py
       md5: 4652251548ea7e950b21e32d329ecc77
       size: 2408
+=======
+      md5: b0e218495699731af38e18a49a9b89cd
+      size: 2669
+    - path: src/stages/evaluate.py
+      md5: 6c5c04fc99da1ac621c7088e611910b4
+      size: 2407
+>>>>>>> 3df5cda29f6bf4e241f79a4658d809cf06519000
     params:
       params.yaml:
         base:
