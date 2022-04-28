@@ -4,8 +4,8 @@ stages:
     cmd: python src/stages/data_load.py --config=params.yaml
     deps:
     - path: src/stages/data_load.py
-      md5: ebc71be562bef12448a953eae1f8d147
-      size: 956
+      md5: 818fb096bfce5469337313c780db5282
+      size: 1005
     params:
       params.yaml:
         base:
@@ -24,8 +24,8 @@ stages:
       md5: 4224576f0267bf88902f87f0f6200967
       size: 2757
     - path: src/stages/featurize.py
-      md5: fa1ec29f6ff564a3e3d305aea118be81
-      size: 1292
+      md5: 0e62e23a026eae95ca782e74493c6662
+      size: 1341
     params:
       params.yaml:
         base:
@@ -47,8 +47,8 @@ stages:
       md5: 5d03a1564b3038fc35a842f8e4bde491
       size: 7260
     - path: src/stages/data_split.py
-      md5: 8dfe312ff90160af2ff57f15ac8cb829
-      size: 1298
+      md5: 1d2d16d2086d9120fe9aba78dd0f02b3
+      size: 1347
     params:
       params.yaml:
         base:
@@ -75,8 +75,8 @@ stages:
       md5: ed8a7e5ba0a211251bdee6c498fe3eb4
       size: 5724
     - path: src/stages/train.py
-      md5: 0f01f271bc8169c69ce724f19eacde07
-      size: 1371
+      md5: ceae0bf7a36c585237ba6d38316ffd5c
+      size: 1420
     params:
       params.yaml:
         base:
@@ -91,7 +91,7 @@ stages:
             logreg:
               param_grid:
                 C:
-                - 0.001
+                - 1e-06
                 max_iter:
                 - 100
                 solver:
@@ -114,7 +114,7 @@ stages:
           model_path: models/model.joblib
     outs:
     - path: models/model.joblib
-      md5: 02ba4225f8e53d62aaa41ffdf102ea34
+      md5: 803745cd5736b7c50f91709dcd902a11
       size: 2669
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
@@ -123,11 +123,11 @@ stages:
       md5: b5e45593a772fc66629488e1806505c4
       size: 1492
     - path: models/model.joblib
-      md5: 02ba4225f8e53d62aaa41ffdf102ea34
+      md5: 803745cd5736b7c50f91709dcd902a11
       size: 2669
     - path: src/stages/evaluate.py
-      md5: e845a44aa40bffa0b20b08a7d854e999
-      size: 2358
+      md5: 6c5c04fc99da1ac621c7088e611910b4
+      size: 2407
     params:
       params.yaml:
         base:
@@ -141,8 +141,8 @@ stages:
         featurize.target_column: target
     outs:
     - path: reports/confusion_matrix.png
-      md5: 64609d4d2fe8d2718531f253d881dde6
-      size: 24999
+      md5: 4d5adfc88cc010fbde6c6b6f75d1b2a2
+      size: 24687
     - path: reports/metrics.json
-      md5: d533847a0ca14ca93752b1b1f1df349e
-      size: 32
+      md5: 94ff3def6a0c9b0d3238a3ce0f2379d9
+      size: 33
