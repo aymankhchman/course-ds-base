@@ -3,6 +3,11 @@ from sklearn.datasets import load_iris
 from typing import Text
 import yaml
 
+import sys
+import os
+sys.path.append(os.getcwd())
+
+print(sys.path)
 from src.utils.logs import get_logger
 
 

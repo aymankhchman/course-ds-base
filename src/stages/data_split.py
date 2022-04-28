@@ -4,6 +4,10 @@ from sklearn.model_selection import train_test_split
 from typing import Text
 import yaml
 
+import sys
+import os
+sys.path.append(os.getcwd())
+
 from src.utils.logs import get_logger
 
 

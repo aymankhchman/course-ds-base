@@ -2,7 +2,9 @@ import argparse
 import pandas as pd
 from typing import Text
 import yaml
-
+import sys
+import os
+sys.path.append(os.getcwd())
 from src.utils.logs import get_logger
 
 
